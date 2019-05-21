@@ -1,0 +1,10 @@
+<h1>All Classes</h1>
+
+<h3>
+<% @sclasses.each do |sc| %>
+	<%= link_to sc.title, school_class_path(sc) %><br>
+<% end %>
+</h3>
+
+<%= link_to 'Add new class', new_school_class_path %><br>
+<%= link_to 'Home', '/' %>

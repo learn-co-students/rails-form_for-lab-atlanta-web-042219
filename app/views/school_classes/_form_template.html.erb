@@ -1,0 +1,17 @@
+<h1><%= @header_msg %></h1>
+
+<ul>
+	<% @sclass.errors.full_messages.each do |error| %>
+		<li style="color: red;"><%= error %></li>
+	<% end %>
+</ul>
+
+<%= form_for(@sclass) do |f| %>
+  <label>Subject</label><br>
+  <%= f.text_field :title %><br><br>
+
+  <label>Room number</label><br>
+  <%= f.text_field :room_number %><br><br>
+
+  <%= f.submit @button_msg%>
+<% end %>
