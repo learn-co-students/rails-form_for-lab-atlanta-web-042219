@@ -1,0 +1,7 @@
+<h1>Flatiron School Classes</h1>
+<h3>
+<% @school_classes.each do |thing| %>
+  <%= link_to(thing.title, school_class_path(thing)) %>
+  <p>Room Number:<%= thing.room_number %></p>
+<% end %>
+</h3>

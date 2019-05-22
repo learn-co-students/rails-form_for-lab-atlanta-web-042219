@@ -1,0 +1,8 @@
+<h1>Students of Flatiron School</h1>
+<h3>
+<% @students.each do |student| %>
+  <%= link_to(student.to_s, student_path(student))  %>
+<br>
+<% end %>
+</h3>
+<%= link_to("Add Student", new_student_path) %>
